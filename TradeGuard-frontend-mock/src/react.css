@@ -1,0 +1,5 @@
+.primary-btn { background: var(--green); color: #06140a; }
+.primary-btn:hover { transform: translateY(-1px); opacity: .92; }
+.auth-body { background: radial-gradient(circle at top left, #101e35 0%, var(--background) 40%); }
+button, input, select { font: inherit; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }

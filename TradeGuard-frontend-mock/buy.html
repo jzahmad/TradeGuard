@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Stock - TradeGuard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div>
+        <div class="brand">Trade<span>Guard</span></div>
+        <div class="brand-subtitle">Trade Order & Risk Management</div>
+    </div>
+
+    <div class="nav-right">
+
+        <div class="market-status">
+            <span class="status-dot"></span>
+            Market Open
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="orders.html">Orders</a>
+            <a href="login.html">Logout</a>
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="container trade-page">
+
+    <a class="back-link" href="dashboard.html">
+        ← Back to dashboard
+    </a>
+
+
+    <div class="trade-page-header">
+
+        <div>
+            <p class="eyebrow">NEW ORDER</p>
+            <h1>Buy Stock</h1>
+            <p class="muted">
+                Create a new purchase order.
+            </p>
+        </div>
+
+        <span class="side-pill buy-side">BUY</span>
+
+    </div>
+
+
+    <div class="trade-layout">
+
+
+        <section class="panel trade-form">
+
+            <div class="form-section">
+
+                <label for="buyTicker">
+                    Stock Symbol
+                </label>
+
+                <input
+                    id="buyTicker"
+                    type="text"
+                    placeholder="Search ticker, e.g. AAPL"
+                    value="AAPL"
+                >
+
+                <div class="ticker-result">
+
+                    <div>
+                        <strong>AAPL</strong>
+                        <span>Apple Inc.</span>
+                    </div>
+
+                    <div class="quote">
+                        $210.00
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <label for="buyQuantity">
+                    Quantity
+                </label>
+
+                <input
+                    id="buyQuantity"
+                    type="number"
+                    min="1"
+                    value="10"
+                >
+
+            </div>
+
+
+            <div class="estimate-card">
+
+                <div>
+                    <span>Market Price</span>
+                    <strong>$210.00</strong>
+                </div>
+
+                <div>
+                    <span>Estimated Cost</span>
+                    <strong id="buyTotal">$2,100.00</strong>
+                </div>
+
+            </div>
+
+
+            <button
+                id="buyButton"
+                class="buy-btn full-width"
+            >
+                Review Buy Order
+            </button>
+
+        </section>
+
+
+        <aside class="panel trade-preview">
+
+            <div class="panel-header">
+                <div>
+                    <h2>TradeGuard Check</h2>
+                    <p>Pre-trade risk analysis</p>
+                </div>
+            </div>
+
+
+            <div class="preview-section">
+
+                <span>Portfolio Impact</span>
+
+                <div class="impact-row">
+                    <span>AAPL Before</span>
+                    <strong>27%</strong>
+                </div>
+
+                <div class="impact-row">
+                    <span>AAPL After</span>
+                    <strong>34%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="preview-section">
+
+                <span>Risk Checks</span>
+
+                <div class="check-row safe-text">
+                    ✓ Sufficient buying power
+                </div>
+
+                <div class="check-row safe-text">
+                    ✓ Order within position limit
+                </div>
+
+                <div class="check-row warning-text">
+                    ⚠ Concentration increasing
+                </div>
+
+            </div>
+
+
+            <div class="risk-summary">
+                <span>Estimated Risk</span>
+                <strong>MODERATE</strong>
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<script src="js/trade.js"></script>
+
+</body>
+</html>

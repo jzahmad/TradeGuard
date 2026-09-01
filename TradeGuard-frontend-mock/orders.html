@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - TradeGuard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div>
+        <div class="brand">Trade<span>Guard</span></div>
+        <div class="brand-subtitle">Trade Order & Risk Management</div>
+    </div>
+
+    <div class="nav-right">
+
+        <div class="market-status">
+            <span class="status-dot"></span>
+            Market Open
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a class="active" href="orders.html">Orders</a>
+            <a href="login.html">Logout</a>
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+    <div class="page-heading order-heading">
+
+        <div>
+            <p class="eyebrow">ACTIVITY</p>
+            <h1>Order History</h1>
+            <p class="muted">
+                Review and manage trade orders.
+            </p>
+        </div>
+
+        <div class="order-actions">
+            <a href="buy.html" class="buy-btn">+ Buy</a>
+            <a href="sell.html" class="sell-btn">− Sell</a>
+        </div>
+
+    </div>
+
+
+    <div class="order-summary-grid">
+
+        <div class="order-summary">
+            <span>All Orders</span>
+            <strong>14</strong>
+        </div>
+
+        <div class="order-summary">
+            <span>Pending</span>
+            <strong class="warning-text">3</strong>
+        </div>
+
+        <div class="order-summary">
+            <span>Approved</span>
+            <strong class="positive">8</strong>
+        </div>
+
+        <div class="order-summary">
+            <span>Rejected / Flagged</span>
+            <strong class="negative">3</strong>
+        </div>
+
+    </div>
+
+
+    <section class="panel">
+
+        <div class="panel-header">
+            <div>
+                <h2>Trade Orders</h2>
+                <p>Most recent activity first</p>
+            </div>
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table id="ordersTable">
+
+                <thead>
+                <tr>
+                    <th>Order</th>
+                    <th>Ticker</th>
+                    <th>Side</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Submitted</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+
+                <tbody>
+
+                <tr>
+                    <td>#1048</td>
+                    <td><strong>AAPL</strong></td>
+                    <td>
+                        <span class="side-label buy-label">
+                            BUY
+                        </span>
+                    </td>
+                    <td>20</td>
+                    <td>$210.00</td>
+                    <td>
+                        <span class="status approved">
+                            APPROVED
+                        </span>
+                    </td>
+                    <td>2:15 PM</td>
+                    <td class="muted">—</td>
+                </tr>
+
+
+                <tr>
+                    <td>#1049</td>
+                    <td><strong>AMZN</strong></td>
+                    <td>
+                        <span class="side-label buy-label">
+                            BUY
+                        </span>
+                    </td>
+                    <td>5</td>
+                    <td>$230.00</td>
+
+                    <td class="status-cell">
+                        <span class="status pending">
+                            PENDING
+                        </span>
+                    </td>
+
+                    <td>2:32 PM</td>
+
+                    <td>
+                        <button class="cancel-btn">
+                            Cancel
+                        </button>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>#1047</td>
+                    <td><strong>MSFT</strong></td>
+                    <td>
+                        <span class="side-label sell-label">
+                            SELL
+                        </span>
+                    </td>
+                    <td>5</td>
+                    <td>$422.50</td>
+                    <td>
+                        <span class="status approved">
+                            APPROVED
+                        </span>
+                    </td>
+                    <td>1:18 PM</td>
+                    <td class="muted">—</td>
+                </tr>
+
+
+                <tr>
+                    <td>#1046</td>
+                    <td><strong>TSLA</strong></td>
+                    <td>
+                        <span class="side-label buy-label">
+                            BUY
+                        </span>
+                    </td>
+                    <td>50</td>
+                    <td>$340.00</td>
+                    <td>
+                        <span class="status flagged">
+                            FLAGGED
+                        </span>
+                    </td>
+                    <td>12:44 PM</td>
+                    <td class="muted">—</td>
+                </tr>
+
+
+                <tr>
+                    <td>#1045</td>
+                    <td><strong>NVDA</strong></td>
+                    <td>
+                        <span class="side-label buy-label">
+                            BUY
+                        </span>
+                    </td>
+                    <td>100</td>
+                    <td>$184.08</td>
+                    <td>
+                        <span class="status rejected">
+                            REJECTED
+                        </span>
+                    </td>
+                    <td>11:57 AM</td>
+                    <td class="muted">—</td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/trade.js"></script>
+
+</body>
+</html>
