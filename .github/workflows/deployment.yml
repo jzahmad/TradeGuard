@@ -1,6 +1,15 @@
-deploy:
-    needs: test
-    if: github.ref == 'refs/heads/jazib' && github.event_name == 'push'
+name: Deployment
+
+on:
+  workflow_run:
+    workflows: ["Backend Tests"]
+    types:
+      - completed
+    branches: [ jazib ]
+
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     defaults:
