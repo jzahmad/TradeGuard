@@ -5,3 +5,9 @@ __pycache__/
 .pytest_cache/
 *.log
 .DS_Store
+.idea/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
