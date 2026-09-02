@@ -20,7 +20,7 @@ variable "ssh_allowed_cidr" {
   type        = string
   description = "CIDR block allowed to SSH into the EC2 instance"
 
-  default = "142.169.80.68/32"
+  default = "142.169.80.13/32"
 }
 
 variable "key_name" {
