@@ -5,7 +5,7 @@ on:
     workflows: ["Backend Tests"]
     types:
       - completed
-    branches: [ jazib ]
+    branches: [ main ]
 
 jobs:
   deploy:
