@@ -5,6 +5,5 @@ resource "aws_instance" "tradeguard" {
   vpc_security_group_ids = [aws_security_group.app_sg.id]
   key_name               = var.key_name
 
-  user_data              = file("${path.module}/deploy.sh")
   tags = { Name = "TradeGuard" }
 }
