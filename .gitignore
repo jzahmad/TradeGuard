@@ -6,3 +6,8 @@ __pycache__/
 *.log
 .DS_Store
 .idea/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
