@@ -16,11 +16,18 @@ variable "instance_type" {
   description = "The type of EC2 instance"
 }
 
+data "http" "my_ip" {
+  url = "https://api.ipify.org"
+}
+
 variable "ssh_allowed_cidr" {
   type        = string
   description = "CIDR block allowed to SSH into the EC2 instance"
+  default     = null
+}
 
-  default = "142.169.80.13/32"
+locals {
+  ssh_allowed_cidr = coalesce(var.ssh_allowed_cidr, "${chomp(data.http.my_ip.response_body)}/32")
 }
 
 variable "key_name" {
