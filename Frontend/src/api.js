@@ -1,4 +1,4 @@
-const API_BASE = 'http://184.193.193.198:5000/api'
+const API_BASE = 'https://tradeguard1010.duckdns.org/api'
 
 const TOKEN_KEY = 'tradeguard_token'
 const USER_KEY = 'tradeguard_user'
