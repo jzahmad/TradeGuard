@@ -17,7 +17,7 @@ def create_app():
     jwt.init_app(app)
 
     # Load models
-    from app import model
+    from app import models
 
     # Register authentication routes
     from app.controllers.auth_controller import auth_bp
