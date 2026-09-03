@@ -7,3 +7,10 @@ resource "aws_instance" "tradeguard" {
 
   tags = { Name = "TradeGuard" }
 }
+
+resource "aws_eip" "tradeguard" {
+  instance = aws_instance.tradeguard.id
+  domain   = "vpc"
+
+  tags = { Name = "TradeGuard-EIP" }
+}
