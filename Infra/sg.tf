@@ -43,6 +43,15 @@ resource "aws_security_group" "app_sg" {
 
   }
 
+    ingress {
+    description = "Monitering v2"
+    from_port   = 9090
+    to_port     = 9090
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+
+  }
+
   ingress {
     description = "Monitoring Server"
     from_port   = 3000
