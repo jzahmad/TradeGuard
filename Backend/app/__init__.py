@@ -3,10 +3,12 @@ from flask_cors import CORS
 
 from app.config import Config
 from app.extensions import db, jwt
+from prometheus_flask_exporter import PrometheusMetrics
 
 
 def create_app():
     app = Flask(__name__)
+    metrics = PrometheusMetrics(app)
     app.config.from_object(Config)
 
     CORS(app, resources={r"/api/*": {"origins": "*"}})
