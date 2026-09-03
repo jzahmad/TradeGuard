@@ -39,7 +39,7 @@ def register_user(
 
     portfolio = Portfolio(
         user_id=user.id,
-        cash_balance=0.00
+        cash_balance=10000.00
     )
 
     db.session.add(portfolio)
