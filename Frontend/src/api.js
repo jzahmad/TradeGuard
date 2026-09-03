@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000/api'
+const API_BASE = import.meta.env.VITE_API_URL || 'http://184.193.193.198:5000/api'
 
 const TOKEN_KEY = 'tradeguard_token'
 const USER_KEY = 'tradeguard_user'
