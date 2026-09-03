@@ -4,12 +4,12 @@ def test_dashboard_requires_auth(client):
     assert response.status_code == 401
 
 
-def test_dashboard_empty_for_new_user(client, trader_headers):
+def test_dashboard_new_user_starts_with_initial_balance(client, trader_headers):
     response = client.get("/api/dashboard", headers=trader_headers)
 
     assert response.status_code == 200
     body = response.get_json()
-    assert body["cash_balance"] == 0.0
+    assert body["cash_balance"] == 10000.0
     assert body["holdings"] == []
 
 

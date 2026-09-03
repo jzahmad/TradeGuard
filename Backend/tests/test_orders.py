@@ -24,9 +24,10 @@ def test_create_order_invalid_type(client, trader_headers, mock_prices):
 
 
 def test_create_buy_order_insufficient_cash(client, trader_headers, mock_prices):
+    # new traders start with $10,000; 200 * $100 AAPL exceeds that
     response = client.post(
         "/api/orders",
-        json={"symbol": "AAPL", "order_type": "BUY", "quantity": 10},
+        json={"symbol": "AAPL", "order_type": "BUY", "quantity": 200},
         headers=trader_headers,
     )
 
