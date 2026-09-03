@@ -20,14 +20,6 @@ resource "aws_security_group" "app_sg" {
   }
 
   ingress {
-    description = "HTTPS from anywhere"
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
     description = "MySQL from within this security group"
     from_port   = 3306
     to_port     = 3306
@@ -46,6 +38,15 @@ resource "aws_security_group" "app_sg" {
     description = "Flask dev - assignment only"
     from_port   = 5000
     to_port     = 5000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+
+  }
+
+  ingress {
+    description = "Monitoring Server"
+    from_port   = 3000
+    to_port     = 3000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 }
